@@ -23,7 +23,7 @@ async def get_user_id(user_id: int) -> JSONResponse:
 
 
 @app.get('/user')
-async def get_user_info(username: str = None, age: str = None) -> JSONResponse:
+async def get_user_info(username: str = None, age: int = None) -> JSONResponse:
     if username is None and age is None:
         return JSONResponse(content='Не заданы параметры пользователя',
                             headers={'Content-Type': 'charset=utf-8'})
